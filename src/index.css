@@ -1,0 +1,222 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Orbitron:wght@500;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=Cinzel:wght@600;700;900&display=swap');
+
+@theme {
+  --color-theme-bg: var(--theme-bg);
+  --color-theme-card: var(--theme-card);
+  --color-theme-border: var(--theme-border);
+  --color-theme-text: var(--theme-text);
+  --color-theme-muted: var(--theme-muted);
+  --color-theme-primary: var(--theme-primary);
+  --color-theme-secondary: var(--theme-secondary);
+  --color-theme-accent: var(--theme-accent);
+  --color-theme-gold: var(--theme-gold);
+  --color-theme-success: var(--theme-success);
+  
+  --shadow-themeGlow: 0 0 15px var(--theme-glow);
+  --shadow-theme-glow: 0 0 15px var(--theme-glow);
+}
+
+/* Dynamic Theme Variable Configuration */
+
+/* Dynamic Theme Variable Configuration (Light & Dark Variants) */
+
+/* 1. Cozy Tavern RPG */
+.theme-rpg.dark-mode, .theme-rpg {
+  --theme-bg: #18110a; /* Dark Tavern Background */
+  --theme-card: #2c1e15; /* Warm Oak Card */
+  --theme-border: #8c6a46; /* Burnished Copper/Gold Border */
+  --theme-text: #f4eae1; /* Warm Parchment Text */
+  --theme-muted: #a38c76; /* Weathered Leather */
+  --theme-primary: #dfa837; /* Tavern Gold Accent */
+  --theme-secondary: #0f764a; /* Forest Guild Green */
+  --theme-accent: #e5993b; /* Hearthfire Orange */
+  --theme-gold: #dfa837;
+  --theme-success: #10b981;
+  --theme-glow: rgba(223, 168, 55, 0.35);
+}
+.theme-rpg.light-mode {
+  --theme-bg: #fcf8f2; /* Light Parchment background */
+  --theme-card: #f4eae1; /* Warm Cream Card */
+  --theme-border: #a38c76; /* Warm Leather border */
+  --theme-text: #3c2a21; /* Charcoal brown text */
+  --theme-muted: #8c6a46; /* Amber brown muted text */
+  --theme-primary: #d97706; /* Rich amber primary */
+  --theme-secondary: #166534; /* Green Guild secondary */
+  --theme-accent: #d97706;
+  --theme-gold: #b45309;
+  --theme-success: #15803d;
+  --theme-glow: rgba(217, 119, 6, 0.2);
+}
+
+/* 2. Cyberpunk Neon */
+.theme-cyberpunk.dark-mode, .theme-cyberpunk {
+  --theme-bg: #07000d; /* Cyber Dark Neon Background */
+  --theme-card: #140024; /* Cyber Neon Card */
+  --theme-border: #ff007f; /* Cyber Pink Border */
+  --theme-text: #e5e9f0; /* Hologram White */
+  --theme-muted: #8892b0; /* Grid Gray */
+  --theme-primary: #ff007f; /* Laser Pink */
+  --theme-secondary: #00f0ff; /* Electric Cyan */
+  --theme-accent: #00f0ff; /* Dataflow Cyan */
+  --theme-gold: #ffd600;
+  --theme-success: #10b981;
+  --theme-glow: rgba(0, 240, 255, 0.4);
+}
+.theme-cyberpunk.light-mode {
+  --theme-bg: #f5f0f9; /* Soft neon violet background */
+  --theme-card: #ffffff; /* White card */
+  --theme-border: #ff007f; /* Pink neon border */
+  --theme-text: #140024; /* Cyber midnight black text */
+  --theme-muted: #6b7280; /* Neutral gray */
+  --theme-primary: #ff007f;
+  --theme-secondary: #00b4d8;
+  --theme-accent: #00b4d8;
+  --theme-gold: #eab308;
+  --theme-success: #10b981;
+  --theme-glow: rgba(255, 0, 127, 0.15);
+}
+
+/* 3. Pastel Dream */
+.theme-pastel.light-mode, .theme-pastel {
+  --theme-bg: #fff0f3; /* Strawberry Cream Background */
+  --theme-card: #ffffff; /* Fluffy Cloud White Card */
+  --theme-border: #fad2e1; /* Marshmallow Pink Border */
+  --theme-text: #3c2c77; /* Deep Grape Violet */
+  --theme-muted: #8c7db8; /* Lavender Fog */
+  --theme-primary: #b388ff; /* Soft Violet Primary */
+  --theme-secondary: #8c9eff; /* Baby Blue Secondary */
+  --theme-accent: #ff8a80; /* Soft Coral Accent */
+  --theme-gold: #ffd54f;
+  --theme-success: #66bb6a;
+  --theme-glow: rgba(179, 136, 255, 0.3);
+}
+.theme-pastel.dark-mode {
+  --theme-bg: #1e1b29; /* Lavender midnight background */
+  --theme-card: #2a253b; /* Dark cloud card */
+  --theme-border: #b388ff; /* Pastel violet border */
+  --theme-text: #fff0f3; /* Pastel pink text */
+  --theme-muted: #a399c2; /* Deep lavender */
+  --theme-primary: #b388ff;
+  --theme-secondary: #8c9eff;
+  --theme-accent: #ff8a80;
+  --theme-gold: #ffd54f;
+  --theme-success: #66bb6a;
+  --theme-glow: rgba(179, 136, 255, 0.4);
+}
+
+/* 4. Minimalist */
+.theme-minimal.light-mode, .theme-minimal {
+  --theme-bg: #ffffff; /* Crisp White Background */
+  --theme-card: #f8fafc; /* Sleek Gray-Slate Card */
+  --theme-border: #0f172a; /* Ink Black Border */
+  --theme-text: #0f172a; /* Ink Black Text */
+  --theme-muted: #64748b; /* Draft Slate Muted */
+  --theme-primary: #0f172a; /* Solid Ink Primary */
+  --theme-secondary: #475569; /* Pencil Gray */
+  --theme-accent: #334155; /* Shadow Gray Accent */
+  --theme-gold: #d97706; /* Dark Amber Gold */
+  --theme-success: #166534; /* Forest Green */
+  --theme-glow: rgba(15, 23, 42, 0.15);
+}
+.theme-minimal.dark-mode {
+  --theme-bg: #0f172a; /* Obsidian black background */
+  --theme-card: #1e293b; /* Charcoal slate card */
+  --theme-border: #cbd5e1; /* White board border */
+  --theme-text: #f8fafc; /* Clean chalk white text */
+  --theme-muted: #94a3b8; /* Chalk grey muted */
+  --theme-primary: #f8fafc;
+  --theme-secondary: #e2e8f0;
+  --theme-accent: #e2e8f0;
+  --theme-gold: #fbbf24;
+  --theme-success: #4ade80;
+  --theme-glow: rgba(248, 250, 252, 0.15);
+}
+
+/* 5. Void Lord (Secret) */
+.theme-void.dark-mode, .theme-void {
+  --theme-bg: #020617; /* Deep Abyss Space Black */
+  --theme-card: #0b1329; /* Dark Star Card */
+  --theme-border: #7c3aed; /* Eldritch Violet Border */
+  --theme-text: #e2e8f0; /* Starlight White Text */
+  --theme-muted: #64748b; /* Nebula Gray */
+  --theme-primary: #8b5cf6; /* Void Rift Purple */
+  --theme-secondary: #10b981; /* Toxic Emerald */
+  --theme-accent: #10b981; /* Rift Glow Green */
+  --theme-gold: #f59e0b;
+  --theme-success: #059669;
+  --theme-glow: rgba(139, 92, 246, 0.45);
+}
+.theme-void.light-mode {
+  --theme-bg: #f1f0f7; /* Milky way star dust background */
+  --theme-card: #ffffff; /* White dwarf card */
+  --theme-border: #7c3aed; /* Cosmic violet border */
+  --theme-text: #0c0721; /* Deep space purple text */
+  --theme-muted: #64748b; /* Nebula grey */
+  --theme-primary: #7c3aed;
+  --theme-secondary: #059669;
+  --theme-accent: #059669;
+  --theme-gold: #d97706;
+  --theme-success: #059669;
+  --theme-glow: rgba(124, 58, 237, 0.2);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+  font-family: 'Outfit', sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--theme-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--theme-border);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-primary);
+}
+
+/* Common Interactive Classes */
+.theme-transition {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--theme-glow);
+  border-color: var(--theme-primary);
+}
+
+/* Heartbeat / Pulse effects */
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px var(--theme-glow);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--theme-glow);
+  }
+}
